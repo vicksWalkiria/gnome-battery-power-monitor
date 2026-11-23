@@ -31,6 +31,16 @@ chmod +x install.sh
 
 > **Nota para Wayland:** GNOME Shell solo detecta extensiones nuevas al iniciar sesión. Tras ejecutar `./install.sh`, cierra sesión y vuelve a entrar (o reinicia). En X11 basta con `Alt+F2` → `r` → `Enter`.
 
+### Si no aparece el widget tras reiniciar sesión
+
+Comprueba que las extensiones de usuario no estén desactivadas globalmente en GNOME (el script `install.sh` ya lo corrige automáticamente):
+
+```bash
+gsettings set org.gnome.shell disable-user-extensions false
+gnome-extensions enable battery-power@vant
+gnome-extensions info battery-power@vant
+```
+
 ## Desinstalación
 
 ```bash

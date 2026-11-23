@@ -8,6 +8,11 @@ DEST_DIR="$HOME/.local/share/gnome-shell/extensions/$UUID"
 mkdir -p "$DEST_DIR"
 cp "$SRC_DIR/extension.js" "$SRC_DIR/metadata.json" "$SRC_DIR/stylesheet.css" "$DEST_DIR/"
 
+if [[ "$(gsettings get org.gnome.shell disable-user-extensions 2>/dev/null || echo false)" == "true" ]]; then
+  gsettings set org.gnome.shell disable-user-extensions false
+  echo "Extensiones de usuario reactivadas (disable-user-extensions=false)."
+fi
+
 if gnome-extensions enable "$UUID" 2>/dev/null; then
   echo "Extensión '$UUID' instalada y activada."
 else
