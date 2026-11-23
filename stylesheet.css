@@ -1,0 +1,34 @@
+.battery-power-box {
+    spacing: 5px;
+    padding: 0 4px;
+}
+
+.battery-power-icon {
+    icon-size: 14px;
+}
+
+.battery-power-label {
+    font-weight: 500;
+    font-feature-settings: "tnum";
+}
+
+.battery-power-low {
+    color: #eeeeee;
+}
+
+.battery-power-med {
+    color: #f6c177;
+}
+
+.battery-power-high {
+    color: #f38ba8;
+}
+
+.battery-power-charging {
+    color: #a6e3a1;
+}
+
+.battery-power-menu-value {
+    font-weight: 600;
+    font-feature-settings: "tnum";
+}

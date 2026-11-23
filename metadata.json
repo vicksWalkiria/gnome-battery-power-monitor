@@ -1,0 +1,14 @@
+{
+  "uuid": "battery-power@vant",
+  "name": "Battery Power & Time Monitor",
+  "description": "Muestra el consumo real en vatios (W) y el tiempo estimado de batería junto al reloj en la barra superior de GNOME.",
+  "url": "https://github.com/vicksWalkiria/gnome-battery-power-monitor",
+  "shell-version": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "44"
+  ],
+  "version": 1
+}
